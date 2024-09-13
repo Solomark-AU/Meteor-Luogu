@@ -1,0 +1,29 @@
+:root {
+    --card_bg_color: rgba(51, 51, 51, 0.5);
+    --float_card_bg_color: rgba(51, 51, 51, 0.8);
+}
+
+#meteor_luogu_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.top-bar,
+.sidebar,
+main[data-v-51efdf02] {
+    background: transparent !important;
+}
+
+.l-card {
+    color: #eee;
+    background-color: var(--card_bg_color) !important;
+}
+
+.float.operations {
+    color: #eee;
+    background-color: var(--float_card_bg_color) !important;
+}
