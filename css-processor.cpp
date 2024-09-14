@@ -21,5 +21,6 @@ int main()
         else
             s = s + c;
     }
+    cout << "\"" << s << "\"" << endl;
     return 0;
 }
