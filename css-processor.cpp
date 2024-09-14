@@ -18,7 +18,7 @@ int main()
             cout << "\"" << s << "\"," << endl;
             s = "";
         }
-        else
+        else if (c != EOF)
             s = s + c;
     }
     cout << "\"" << s << "\"" << endl;

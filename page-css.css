@@ -2,7 +2,7 @@
     --card_bg_color: rgba(51, 51, 51, 0.5);
     --float_card_bg_color: rgba(51, 51, 51, 0.8);
     --svg_color: #c8c8c8;
-    --code_color: rgb(51, 51, 51);
+    --text_color: rgb(51, 51, 51);
 }
 
 #meteor_luogu_background {
@@ -52,7 +52,7 @@ main[data-v-51efdf02] {
     color: #eee;
 }
 
-.lfe-caption {
+.lfe-caption[data-v-9f81deee] {
     color: darkgray !important;
 }
 
@@ -69,12 +69,36 @@ main[data-v-51efdf02] {
     background-color: var(--float_card_bg_color) !important;
 }
 
+.reply-card>.lfe-h4,
+.lfe-h3[data-v-9f81deee] {
+    color: #eee;
+}
+
+.l-card>.lfe-h2[data-v-6ef7c7b8] {
+    color: darkgray;
+}
+
+.lcolor--red-3 {
+    color: rgb(231, 76, 60) !important;
+}
+
+h1.lfe-h1[data-v-51efdf02] {
+    font-size: 35px;
+}
+
 svg {
     color: var(--svg_color);
 }
 
 pre:has(code),
-code {
-    background-color: var(--code_color) !important;
+code,
+textarea,
+.combo-wrapper[data-v-d3bf5d4d][data-v-0552286e]>.text,
+.dropdown[data-v-d3bf5d4d] {
+    background-color: var(--text_color) !important;
     color: #fff !important;
+}
+
+.dropdown[data-v-d3bf5d4d] {
+    border: none !important;
 }
