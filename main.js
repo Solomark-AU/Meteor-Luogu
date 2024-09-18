@@ -19,27 +19,31 @@
 
 (function () {
     window.onload = (event) => {
-        var meteor_background_css = document.getElementsByClassName("theme-bg")[0].getAttribute("style");
-        var meteor_background = document.createElement("div");
-        meteor_background.style = meteor_background_css;
-        meteor_background.id = "meteor_luogu_background";
-        document.getElementById("app").insertBefore(meteor_background, document.getElementsByClassName("top-bar")[0]);
-        document.getElementsByClassName("theme-bg")[0].style = document.getElementsByClassName("theme-bg")[1].style = "";
-    };
-    var css = [
-    ].join("\n");
-    if (typeof GM_addStyle != "undefined") {
-        GM_addStyle(css);
-    } else {
-        var node = document.createElement("style");
-        node.type = "text/css";
-        node.appendChild(document.createTextNode(css));
-        var heads = document.getElementsByTagName("head");
-        if (heads.length > 0) {
-            heads[0].appendChild(node);
-        } else {
-            // no head yet, stick it whereever
-            document.documentElement.appendChild(node);
+        var luogu_background = document.getElementsByClassName("theme-bg");
+        if (luogu_background.length == 0) {
+            throw new Error("[Err][Meteor Luogu]Not found background");
         }
-    }
+        var meteor_luogu_background_css = luogu_background[0].getAttribute("style");
+        var meteor_luogu_background = document.createElement("div");
+        meteor_luogu_background.style = meteor_luogu_background_css;
+        meteor_luogu_background.id = "meteor_luogu_background";
+        document.getElementById("app").insertBefore(meteor_luogu_background, document.getElementsByClassName("top-bar")[0]);
+        luogu_background[0].style = document.getElementsByClassName("theme-bg")[1].style = "";
+        var css = [
+        ].join("\n");
+        if (typeof GM_addStyle != "undefined") {
+            GM_addStyle(css);
+        } else {
+            var node = document.createElement("style");
+            node.type = "text/css";
+            node.appendChild(document.createTextNode(css));
+            var heads = document.getElementsByTagName("head");
+            if (heads.length > 0) {
+                heads[0].appendChild(node);
+            } else {
+                // no head yet, stick it whereever
+                document.documentElement.appendChild(node);
+            }
+        }
+    };
 })();
