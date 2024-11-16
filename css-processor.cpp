@@ -21,6 +21,6 @@ int main()
         else if (c != EOF)
             s = s + c;
     }
-    cout << "\"" << s << "\"" << endl;
+    cout << "\"" << s << "\"";
     return 0;
 }

@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1.dev
 // @description  美化洛谷网站，基于主题“夜空の流星”设计
-// @author       Herobrine6265
+// @author       Herobrine6265, LinkDevCodes
 // @match        http://www.luogu.com.cn/*
 // @match        https://www.luogu.com.cn/*
 // @match        http://*.www.luogu.com.cn/*
@@ -31,7 +31,7 @@
         luogu_background[0].style = document.getElementsByClassName("theme-bg")[1].style = "";
         var css = [
             ":root {",
-            "    --card_bg_color: rgba(51, 51, 51, 0.5);",
+            "    --card_bg_color: rgba(35, 35, 35, 0.5);",
             "    --float_card_bg_color: rgba(51, 51, 51, 0.8);",
             "    --svg_color: #c8c8c8;",
             "    --text_color: rgb(51, 51, 51);",
@@ -162,8 +162,17 @@
             "div.textarea,",
             "div.textarea *,",
             "div[data-v-6a2e7478],",
-            "div[data-v-6a2e7478]>* {",
+            "div[data-v-6a2e7478]>*,",
+            "input[data-v-8a622e56] {",
             "    background-color: rgba(42, 42, 42, 1) !important;",
+            "}",
+            "",
+            "div[data-v-d3bf5d4d] {",
+            "    background-color: var(--card_bg_color) !important;",
+            "}",
+            "",
+            ".dropdown>ul>li[data-v-d3bf5d4d]:hover {",
+            "    background: #3a3c3e !important;",
             "}"
         ].join("\n");
         if (typeof GM_addStyle != "undefined") {
