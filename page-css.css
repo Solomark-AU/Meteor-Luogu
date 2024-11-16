@@ -3,6 +3,7 @@
     --float_card_bg_color: rgba(51, 51, 51, 0.8);
     --svg_color: #c8c8c8;
     --text_color: rgb(51, 51, 51);
+    --text_special_color: rgb(153, 153, 153);
 }
 
 #meteor_luogu_background {
@@ -30,15 +31,37 @@ span[data-v-40281d0d] {
 
 .top-bar,
 .sidebar,
-.user-nav,
 main[data-v-51efdf02] {
     background: transparent !important;
+}
+
+.user-nav[data-v-e275f92e] {
+    background: var(--card_bg_color) !important;
+}
+
+div.author[data-v-4af4731c] {
+    background-color: transparent !important;
+}
+
+.btn-edit-reply {
+    display: none !important;
+}
+
+.action[data-v-4af4731c]>*,
+div.time,
+div[data-v-0fca37c7] {
+    color: var(--text_special_color) !important;
 }
 
 .l-card {
     color: #eee;
     background-color: var(--card_bg_color) !important;
     border-radius: 3px;
+}
+
+div.lfe-marked-wrap.content,
+div.lfe-marked {
+    color: #eee;
 }
 
 .l-card:hover {
@@ -60,7 +83,8 @@ main[data-v-51efdf02] {
     color: #eee !important;
 }
 
-.expand[data-v-9f81deee] {
+.expand[data-v-112a83fd],
+.expand[data-v-0fca37c7] {
     background: linear-gradient(transparent, rgba(51, 51, 51, 0.8)) !important;
 }
 
@@ -101,4 +125,11 @@ textarea,
 
 .dropdown[data-v-d3bf5d4d] {
     border: none !important;
+}
+
+div.textarea,
+div.textarea *,
+div[data-v-6a2e7478],
+div[data-v-6a2e7478]>* {
+    background-color: rgba(42, 42, 42, 1) !important;
 }
